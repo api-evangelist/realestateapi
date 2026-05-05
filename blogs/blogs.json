@@ -1,0 +1,13 @@
+{
+  "repo": "realestateapi",
+  "feeds": [
+    {
+      "source": "https://www.realestateapi.com/blog/",
+      "feed_url": "http://www.realestateapi.com/posts/rss/",
+      "saved": 10,
+      "title": "RealEstateAPI.com"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:34:29Z"
+}
