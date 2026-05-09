@@ -3,11 +3,12 @@
   "feeds": [
     {
       "source": "https://www.realestateapi.com/blog/",
-      "feed_url": "http://www.realestateapi.com/posts/rss/",
-      "saved": 10,
-      "title": "RealEstateAPI.com"
+      "feed_url": "",
+      "title": "",
+      "saved": 0,
+      "error": "no_feed"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-05-03T23:34:29Z"
+  "fetched": "2026-05-09T20:17:51Z"
 }
