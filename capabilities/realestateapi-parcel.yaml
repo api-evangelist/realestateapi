@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: RealEstateAPI — Parcel
+  description: 'RealEstateAPI — Parcel. 1 operations. Lead operation: Retrieve a property''s parcel boundary (GeoJSON). Self-contained
+    Naftiko capability covering one Realestateapi business surface.'
+  tags:
+  - Realestateapi
+  - Parcel
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    REALESTATEAPI_API_KEY: REALESTATEAPI_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: realestateapi-parcel
+    baseUri: https://api.realestateapi.com
+    description: RealEstateAPI — Parcel business capability. Self-contained, no shared references.
+    resources:
+    - name: v2-PropertyBoundary
+      path: /v2/PropertyBoundary
+      operations:
+      - name: post
+        method: POST
+        description: Retrieve a property's parcel boundary (GeoJSON)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: x-api-key
+      value: '{{env.REALESTATEAPI_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: realestateapi-parcel-rest
+    port: 8080
+    description: REST adapter for RealEstateAPI — Parcel. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v2/propertyboundary
+      name: v2-propertyboundary
+      description: REST surface for v2-PropertyBoundary.
+      operations:
+      - method: POST
+        name: post
+        description: Retrieve a property's parcel boundary (GeoJSON)
+        call: realestateapi-parcel.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: realestateapi-parcel-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for RealEstateAPI — Parcel. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: retrieve-property-s-parcel-boundary-geojson
+      description: Retrieve a property's parcel boundary (GeoJSON)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: realestateapi-parcel.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

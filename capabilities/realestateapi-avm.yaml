@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: RealEstateAPI — AVM
+  description: 'RealEstateAPI — AVM. 1 operations. Lead operation: Automated valuation. Self-contained Naftiko capability
+    covering one Realestateapi business surface.'
+  tags:
+  - Realestateapi
+  - AVM
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    REALESTATEAPI_API_KEY: REALESTATEAPI_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: realestateapi-avm
+    baseUri: https://api.realestateapi.com
+    description: RealEstateAPI — AVM business capability. Self-contained, no shared references.
+    resources:
+    - name: v2-AVM
+      path: /v2/AVM
+      operations:
+      - name: post
+        method: POST
+        description: Automated valuation
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: x-api-key
+      value: '{{env.REALESTATEAPI_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: realestateapi-avm-rest
+    port: 8080
+    description: REST adapter for RealEstateAPI — AVM. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/v2/avm
+      name: v2-avm
+      description: REST surface for v2-AVM.
+      operations:
+      - method: POST
+        name: post
+        description: Automated valuation
+        call: realestateapi-avm.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: realestateapi-avm-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for RealEstateAPI — AVM. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: automated-valuation
+      description: Automated valuation
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: realestateapi-avm.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
