@@ -2,12 +2,17 @@
   "repo": "realestateapi",
   "feeds": [
     {
-      "source": "https://www.realestateapi.com/blog/",
+      "source": "https://www.realestateapi.com/posts/rss/",
       "feed_url": "https://www.realestateapi.com/posts/rss/",
-      "title": "RealEstateAPI.com",
-      "saved": 10
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://app.realestateapi.com/login",
+      "error": "URLError"
     }
   ],
   "post_count": 20,
-  "fetched": "2026-05-17T20:48:52Z"
+  "fetched": "2026-06-01T23:35:02Z"
 }
