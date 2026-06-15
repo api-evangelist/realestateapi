@@ -1,0 +1,217 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "RealEstateAPI",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Property Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search properties",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/PropertySearch",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Searchable interface for real estate data, enabling list building, search counts, and advanced filtering on properties. Supports location (address, city, state, zip, county, lat/long, radius, polygon), property characteristics (beds, baths, sqft, lot size, year built, property type), financial filters (assessed value, equity, mortgage, listing price, last sale price), and special-status searches (foreclosure, REO, pre-foreclosure, auction, tax delinquent, cash buyer, investor-owned)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Property Detail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a detailed property record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/PropertyDetail",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a comprehensive record for a single property by ID or address."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Comparables",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve comparable properties",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/PropertyComps",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve comparable properties"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "AVM",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Automated valuation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/AVM",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns an estimated value (AVM) for a property."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Parcel",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a property's parcel boundary (GeoJSON)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/PropertyBoundary",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a property's parcel boundary (GeoJSON)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "MLS",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search MLS active and historical listings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/MLSSearch",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search MLS active and historical listings"
+        },
+        {
+          "info": {
+            "name": "Retrieve MLS listing detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/MLSDetail",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve MLS listing detail"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Skip Trace",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Skip trace an owner",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/SkipTrace",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Look up phone, email, and contact data for a property owner."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Liens",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search involuntary liens",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/InvoluntaryLiens",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search involuntary liens"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

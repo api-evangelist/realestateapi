@@ -1,0 +1,1044 @@
+{
+  "item": [
+    {
+      "id": "02601501-880f-4425-85ad-151c94e480ab",
+      "name": "Property Search",
+      "description": {
+        "content": "Search and filter properties",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bade3b60-6920-4626-8d09-5dd3644aebbb",
+          "name": "Search properties",
+          "request": {
+            "name": "Search properties",
+            "description": {
+              "content": "Searchable interface for real estate data, enabling list building, search counts, and advanced filtering on properties. Supports location (address, city, state, zip, county, lat/long, radius, polygon), property characteristics (beds, baths, sqft, lot size, year built, property type), financial filters (assessed value, equity, mortgage, listing price, last sale price), and special-status searches (foreclosure, REO, pre-foreclosure, auction, tax delinquent, cash buyer, investor-owned).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "PropertySearch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"size\": 50,\n  \"resultIndex\": 0,\n  \"count\": \"<boolean>\",\n  \"ids_only\": \"<boolean>\",\n  \"summary\": \"<boolean>\",\n  \"obfuscate\": \"<boolean>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"county\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"radius\": \"<number>\",\n  \"polygon\": [\n    [\n      \"<number>\",\n      \"<number>\"\n    ],\n    [\n      \"<number>\",\n      \"<number>\"\n    ]\n  ],\n  \"bedrooms_min\": \"<integer>\",\n  \"bedrooms_max\": \"<integer>\",\n  \"bathrooms_min\": \"<number>\",\n  \"bathrooms_max\": \"<number>\",\n  \"building_size_min\": \"<integer>\",\n  \"building_size_max\": \"<integer>\",\n  \"lot_size_min\": \"<integer>\",\n  \"lot_size_max\": \"<integer>\",\n  \"year_built_min\": \"<integer>\",\n  \"year_built_max\": \"<integer>\",\n  \"property_type\": \"<string>\",\n  \"pre_foreclosure\": \"<boolean>\",\n  \"foreclosure\": \"<boolean>\",\n  \"reo\": \"<boolean>\",\n  \"auction\": \"<boolean>\",\n  \"tax_delinquent\": \"<boolean>\",\n  \"cash_buyer\": \"<boolean>\",\n  \"investor_owned\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dd8ef97c-6e8a-4964-930c-ccc56a38fe93",
+              "name": "Search results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertySearch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"size\": 50,\n  \"resultIndex\": 0,\n  \"count\": \"<boolean>\",\n  \"ids_only\": \"<boolean>\",\n  \"summary\": \"<boolean>\",\n  \"obfuscate\": \"<boolean>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"county\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"radius\": \"<number>\",\n  \"polygon\": [\n    [\n      \"<number>\",\n      \"<number>\"\n    ],\n    [\n      \"<number>\",\n      \"<number>\"\n    ]\n  ],\n  \"bedrooms_min\": \"<integer>\",\n  \"bedrooms_max\": \"<integer>\",\n  \"bathrooms_min\": \"<number>\",\n  \"bathrooms_max\": \"<number>\",\n  \"building_size_min\": \"<integer>\",\n  \"building_size_max\": \"<integer>\",\n  \"lot_size_min\": \"<integer>\",\n  \"lot_size_max\": \"<integer>\",\n  \"year_built_min\": \"<integer>\",\n  \"year_built_max\": \"<integer>\",\n  \"property_type\": \"<string>\",\n  \"pre_foreclosure\": \"<boolean>\",\n  \"foreclosure\": \"<boolean>\",\n  \"reo\": \"<boolean>\",\n  \"auction\": \"<boolean>\",\n  \"tax_delinquent\": \"<boolean>\",\n  \"cash_buyer\": \"<boolean>\",\n  \"investor_owned\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cf634299-e29f-4954-8c00-6f1fa4609ebc",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertySearch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"size\": 50,\n  \"resultIndex\": 0,\n  \"count\": \"<boolean>\",\n  \"ids_only\": \"<boolean>\",\n  \"summary\": \"<boolean>\",\n  \"obfuscate\": \"<boolean>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"county\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"radius\": \"<number>\",\n  \"polygon\": [\n    [\n      \"<number>\",\n      \"<number>\"\n    ],\n    [\n      \"<number>\",\n      \"<number>\"\n    ]\n  ],\n  \"bedrooms_min\": \"<integer>\",\n  \"bedrooms_max\": \"<integer>\",\n  \"bathrooms_min\": \"<number>\",\n  \"bathrooms_max\": \"<number>\",\n  \"building_size_min\": \"<integer>\",\n  \"building_size_max\": \"<integer>\",\n  \"lot_size_min\": \"<integer>\",\n  \"lot_size_max\": \"<integer>\",\n  \"year_built_min\": \"<integer>\",\n  \"year_built_max\": \"<integer>\",\n  \"property_type\": \"<string>\",\n  \"pre_foreclosure\": \"<boolean>\",\n  \"foreclosure\": \"<boolean>\",\n  \"reo\": \"<boolean>\",\n  \"auction\": \"<boolean>\",\n  \"tax_delinquent\": \"<boolean>\",\n  \"cash_buyer\": \"<boolean>\",\n  \"investor_owned\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "28d6d475-a725-4020-91a9-caba9b885e03",
+              "name": "Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertySearch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"size\": 50,\n  \"resultIndex\": 0,\n  \"count\": \"<boolean>\",\n  \"ids_only\": \"<boolean>\",\n  \"summary\": \"<boolean>\",\n  \"obfuscate\": \"<boolean>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"county\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"radius\": \"<number>\",\n  \"polygon\": [\n    [\n      \"<number>\",\n      \"<number>\"\n    ],\n    [\n      \"<number>\",\n      \"<number>\"\n    ]\n  ],\n  \"bedrooms_min\": \"<integer>\",\n  \"bedrooms_max\": \"<integer>\",\n  \"bathrooms_min\": \"<number>\",\n  \"bathrooms_max\": \"<number>\",\n  \"building_size_min\": \"<integer>\",\n  \"building_size_max\": \"<integer>\",\n  \"lot_size_min\": \"<integer>\",\n  \"lot_size_max\": \"<integer>\",\n  \"year_built_min\": \"<integer>\",\n  \"year_built_max\": \"<integer>\",\n  \"property_type\": \"<string>\",\n  \"pre_foreclosure\": \"<boolean>\",\n  \"foreclosure\": \"<boolean>\",\n  \"reo\": \"<boolean>\",\n  \"auction\": \"<boolean>\",\n  \"tax_delinquent\": \"<boolean>\",\n  \"cash_buyer\": \"<boolean>\",\n  \"investor_owned\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0bb380ce-fb52-4a05-a9ef-dd4d88f4a906",
+      "name": "Property Detail",
+      "description": {
+        "content": "Detailed property records",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3fef4c0a-58bd-4b6e-b3de-6dcf19b855b5",
+          "name": "Get a detailed property record",
+          "request": {
+            "name": "Get a detailed property record",
+            "description": {
+              "content": "Retrieve a comprehensive record for a single property by ID or address.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "PropertyDetail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4706be75-533e-4128-b57f-d83bae383d32",
+              "name": "Property detail",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertyDetail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "31f532d2-1fef-48dc-bdd2-2c47b0fb879a",
+      "name": "Comparables",
+      "description": {
+        "content": "Comparable property analytics",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8b6734dd-5efd-43aa-a4e1-4075ccfa3cf3",
+          "name": "Retrieve comparable properties",
+          "request": {
+            "name": "Retrieve comparable properties",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "PropertyComps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\",\n  \"radius\": \"<number>\",\n  \"max_results\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b61c3c7c-ec5f-4606-a75b-d963751386de",
+              "name": "Comparable properties",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertyComps"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\",\n  \"radius\": \"<number>\",\n  \"max_results\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e162d1f8-20c4-462a-9536-4b8f92fbb540",
+      "name": "AVM",
+      "description": {
+        "content": "Automated valuation model",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c34aa156-bfca-45bb-86f9-52b0012a40a8",
+          "name": "Automated valuation",
+          "request": {
+            "name": "Automated valuation",
+            "description": {
+              "content": "Returns an estimated value (AVM) for a property.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "AVM"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6d4fb16f-f08f-4ef7-9998-ff817b114e55",
+              "name": "AVM result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "AVM"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d3551f3c-d70a-4d0e-b639-fc90d88f86ce",
+      "name": "Parcel",
+      "description": {
+        "content": "Parcel boundary and GIS data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "afc358f5-6d39-41dc-8517-684dbd1c4248",
+          "name": "Retrieve a property's parcel boundary (GeoJSON)",
+          "request": {
+            "name": "Retrieve a property's parcel boundary (GeoJSON)",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "PropertyBoundary"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a9be7ffb-a285-49c5-8d1f-f96450581667",
+              "name": "Parcel boundary GeoJSON",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertyBoundary"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b7385779-00d0-4ab0-936e-efe91d2bf656",
+      "name": "MLS",
+      "description": {
+        "content": "MLS listing data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c96ba2c9-ac4a-4543-ad41-77733d49db90",
+          "name": "Search MLS active and historical listings",
+          "request": {
+            "name": "Search MLS active and historical listings",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "MLSSearch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b30791ae-6104-47bf-8e5e-ef13c65745ff",
+              "name": "MLS listings",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "MLSSearch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a6982a8c-697a-4766-a23f-9199f2641004",
+          "name": "Retrieve MLS listing detail",
+          "request": {
+            "name": "Retrieve MLS listing detail",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "MLSDetail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mls_id\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1144e397-253a-4371-b32e-8e6613b5d4c5",
+              "name": "MLS detail",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "MLSDetail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"mls_id\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "efbe2626-6d77-4adb-a394-1ea74433eeaf",
+      "name": "Skip Trace",
+      "description": {
+        "content": "Owner contact tracing",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "18b7fed6-df5f-4a46-a604-6ef32e21df34",
+          "name": "Skip trace an owner",
+          "request": {
+            "name": "Skip trace an owner",
+            "description": {
+              "content": "Look up phone, email, and contact data for a property owner.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "SkipTrace"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f0dff1b7-ba85-4cf7-b657-051c7cb8270f",
+              "name": "Skip trace results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "SkipTrace"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0f00484b-ba97-4c7e-a9ff-76cbbdf77075",
+      "name": "Liens",
+      "description": {
+        "content": "Involuntary lien records",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "de609b9c-09cb-401f-b35a-0aa641e12908",
+          "name": "Search involuntary liens",
+          "request": {
+            "name": "Search involuntary liens",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "InvoluntaryLiens"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "11c8b6ca-da88-4ff1-aa64-cc86d5f1b503",
+              "name": "Lien records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "InvoluntaryLiens"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.realestateapi.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5dc0e2ed-0bb9-4bcf-a6d2-74eed43f8026",
+    "name": "RealEstateAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "RealEstateAPI.com provides expressive property data APIs for prop-tech applications. Endpoints include property search, property detail, comparables, AVM (automated valuation), parcel boundary lookups, MLS data, skip tracing, and involuntary lien data. All endpoints accept JSON and require an x-api-key header.\n\nContact Support:\n Name: RealEstateAPI Support",
+      "type": "text/plain"
+    }
+  }
+}
