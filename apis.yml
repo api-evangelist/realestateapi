@@ -47,6 +47,10 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/realestateapi/refs/heads/main/openapi/realestateapi-openapi.yml
 common:
+  - type: DomainSecurity
+    url: security/realestateapi-domain-security.yml
+  - type: Authentication
+    url: authentication/realestateapi-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/realestateapi
   - type: LinkedIn
