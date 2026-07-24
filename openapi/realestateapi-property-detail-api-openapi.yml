@@ -1,0 +1,50 @@
+openapi: 3.1.0
+info:
+  title: RealEstate AVM Property Detail API
+  description: RealEstateAPI.com provides expressive property data APIs for prop-tech applications. Endpoints include property search, property detail, comparables, AVM (automated valuation), parcel boundary lookups, MLS data, skip tracing, and involuntary lien data. All endpoints accept JSON and require an x-api-key header.
+  version: '1.0'
+  contact:
+    name: RealEstateAPI Support
+    url: https://www.realestateapi.com/
+servers:
+- url: https://api.realestateapi.com
+  description: RealEstateAPI production base URL
+security:
+- apiKeyAuth: []
+tags:
+- name: Property Detail
+  description: Detailed property records
+paths:
+  /v2/PropertyDetail:
+    post:
+      tags:
+      - Property Detail
+      summary: Get a detailed property record
+      description: Retrieve a comprehensive record for a single property by ID or address.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                address:
+                  type: string
+                city:
+                  type: string
+                state:
+                  type: string
+                zip:
+                  type: string
+      responses:
+        '200':
+          description: Property detail
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+      description: RealEstateAPI account API key.

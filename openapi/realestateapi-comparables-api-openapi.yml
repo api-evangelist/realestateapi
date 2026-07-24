@@ -1,0 +1,47 @@
+openapi: 3.1.0
+info:
+  title: RealEstate AVM Comparables API
+  description: RealEstateAPI.com provides expressive property data APIs for prop-tech applications. Endpoints include property search, property detail, comparables, AVM (automated valuation), parcel boundary lookups, MLS data, skip tracing, and involuntary lien data. All endpoints accept JSON and require an x-api-key header.
+  version: '1.0'
+  contact:
+    name: RealEstateAPI Support
+    url: https://www.realestateapi.com/
+servers:
+- url: https://api.realestateapi.com
+  description: RealEstateAPI production base URL
+security:
+- apiKeyAuth: []
+tags:
+- name: Comparables
+  description: Comparable property analytics
+paths:
+  /v2/PropertyComps:
+    post:
+      tags:
+      - Comparables
+      summary: Retrieve comparable properties
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                address:
+                  type: string
+                radius:
+                  type: number
+                max_results:
+                  type: integer
+      responses:
+        '200':
+          description: Comparable properties
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+      description: RealEstateAPI account API key.
