@@ -5,9 +5,22 @@ description: >-
   exposes nationwide US property records including ownership, valuations, MLS listings, comparables, parcel boundary
   data, skip tracing, and involuntary liens through a unified JSON REST API.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/realestateapi.png
 tags:
   - Real Estate
   - Property Data
@@ -21,31 +34,134 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: realestateapi:realestateapi
-    name: RealEstateAPI
-    description: >-
-      A unified property data API offering property search, detail records, comparables, automated valuations (AVM),
-      parcel boundaries, MLS data, skip tracing, and involuntary lien records. Authenticates with an x-api-key header.
-      The Property Search endpoint supports list building, counts, and rich filtering across location, property
-      characteristics, financial criteria, and special-status flags such as pre-foreclosure, foreclosure, REO, auction,
-      tax delinquent, cash buyer, and investor owned.
-    humanURL: https://www.realestateapi.com/
-    baseURL: https://api.realestateapi.com
-    tags:
-      - Real Estate
-      - Property Data
-      - MLS
-      - Valuation
-    properties:
-      - type: Documentation
-        url: https://developer.realestateapi.com/reference/getting-started
-      - type: PropertySearch
-        url: https://developer.realestateapi.com/reference/property-search-api
-      - type: Signup
-        url: https://app.realestateapi.com/signup
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/realestateapi/refs/heads/main/openapi/realestateapi-openapi.yml
+- aid: realestateapi:realestateapi-avm-api
+  name: RealEstateAPI AVM API
+  description: Automated valuation model
+  humanURL: https://www.realestateapi.com/
+  baseURL: https://api.realestateapi.com
+  tags:
+  - AVM
+  properties:
+  - type: OpenAPI
+    url: openapi/realestateapi-avm-api-openapi.yml
+  - type: Documentation
+    url: https://developer.realestateapi.com/reference/getting-started
+  - type: PropertySearch
+    url: https://developer.realestateapi.com/reference/property-search-api
+  - type: Signup
+    url: https://app.realestateapi.com/signup
+- aid: realestateapi:realestateapi-comparables-api
+  name: RealEstateAPI Comparables API
+  description: Comparable property analytics
+  humanURL: https://www.realestateapi.com/
+  baseURL: https://api.realestateapi.com
+  tags:
+  - Comparables
+  properties:
+  - type: OpenAPI
+    url: openapi/realestateapi-comparables-api-openapi.yml
+  - type: Documentation
+    url: https://developer.realestateapi.com/reference/getting-started
+  - type: PropertySearch
+    url: https://developer.realestateapi.com/reference/property-search-api
+  - type: Signup
+    url: https://app.realestateapi.com/signup
+- aid: realestateapi:realestateapi-liens-api
+  name: RealEstateAPI Liens API
+  description: Involuntary lien records
+  humanURL: https://www.realestateapi.com/
+  baseURL: https://api.realestateapi.com
+  tags:
+  - Liens
+  properties:
+  - type: OpenAPI
+    url: openapi/realestateapi-liens-api-openapi.yml
+  - type: Documentation
+    url: https://developer.realestateapi.com/reference/getting-started
+  - type: PropertySearch
+    url: https://developer.realestateapi.com/reference/property-search-api
+  - type: Signup
+    url: https://app.realestateapi.com/signup
+- aid: realestateapi:realestateapi-mls-api
+  name: RealEstateAPI MLS API
+  description: MLS listing data
+  humanURL: https://www.realestateapi.com/
+  baseURL: https://api.realestateapi.com
+  tags:
+  - MLS
+  properties:
+  - type: OpenAPI
+    url: openapi/realestateapi-mls-api-openapi.yml
+  - type: Documentation
+    url: https://developer.realestateapi.com/reference/getting-started
+  - type: PropertySearch
+    url: https://developer.realestateapi.com/reference/property-search-api
+  - type: Signup
+    url: https://app.realestateapi.com/signup
+- aid: realestateapi:realestateapi-parcel-api
+  name: RealEstateAPI Parcel API
+  description: Parcel boundary and GIS data
+  humanURL: https://www.realestateapi.com/
+  baseURL: https://api.realestateapi.com
+  tags:
+  - Parcel
+  properties:
+  - type: OpenAPI
+    url: openapi/realestateapi-parcel-api-openapi.yml
+  - type: Documentation
+    url: https://developer.realestateapi.com/reference/getting-started
+  - type: PropertySearch
+    url: https://developer.realestateapi.com/reference/property-search-api
+  - type: Signup
+    url: https://app.realestateapi.com/signup
+- aid: realestateapi:realestateapi-property-detail-api
+  name: RealEstateAPI Property Detail API
+  description: Detailed property records
+  humanURL: https://www.realestateapi.com/
+  baseURL: https://api.realestateapi.com
+  tags:
+  - Property Detail
+  properties:
+  - type: OpenAPI
+    url: openapi/realestateapi-property-detail-api-openapi.yml
+  - type: Documentation
+    url: https://developer.realestateapi.com/reference/getting-started
+  - type: PropertySearch
+    url: https://developer.realestateapi.com/reference/property-search-api
+  - type: Signup
+    url: https://app.realestateapi.com/signup
+- aid: realestateapi:realestateapi-property-search-api
+  name: RealEstateAPI Property Search API
+  description: Search and filter properties
+  humanURL: https://www.realestateapi.com/
+  baseURL: https://api.realestateapi.com
+  tags:
+  - Property Search
+  properties:
+  - type: OpenAPI
+    url: openapi/realestateapi-property-search-api-openapi.yml
+  - type: Documentation
+    url: https://developer.realestateapi.com/reference/getting-started
+  - type: PropertySearch
+    url: https://developer.realestateapi.com/reference/property-search-api
+  - type: Signup
+    url: https://app.realestateapi.com/signup
+- aid: realestateapi:realestateapi-skip-trace-api
+  name: RealEstateAPI Skip Trace API
+  description: Owner contact tracing
+  humanURL: https://www.realestateapi.com/
+  baseURL: https://api.realestateapi.com
+  tags:
+  - Skip Trace
+  properties:
+  - type: OpenAPI
+    url: openapi/realestateapi-skip-trace-api-openapi.yml
+  - type: Documentation
+    url: https://developer.realestateapi.com/reference/getting-started
+  - type: PropertySearch
+    url: https://developer.realestateapi.com/reference/property-search-api
+  - type: Signup
+    url: https://app.realestateapi.com/signup
 common:
   - type: AgenticAccess
     url: agentic-access/realestateapi-agentic-access.yml
