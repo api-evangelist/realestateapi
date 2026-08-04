@@ -1,0 +1,28 @@
+{
+  "provider": "realestateapi",
+  "sources": [
+    "realestateapi-avm-api-openapi.yml",
+    "realestateapi-comparables-api-openapi.yml",
+    "realestateapi-liens-api-openapi.yml",
+    "realestateapi-mls-api-openapi.yml",
+    "realestateapi-parcel-api-openapi.yml",
+    "realestateapi-property-detail-api-openapi.yml",
+    "realestateapi-property-search-api-openapi.yml",
+    "realestateapi-skip-trace-api-openapi.yml"
+  ],
+  "outputs": [
+    "realestateapi-avm-api-openapi.yml",
+    "realestateapi-comparables-api-openapi.yml",
+    "realestateapi-liens-api-openapi.yml",
+    "realestateapi-mls-api-openapi.yml",
+    "realestateapi-parcel-api-openapi.yml",
+    "realestateapi-property-detail-api-openapi.yml",
+    "realestateapi-property-search-api-openapi.yml",
+    "realestateapi-skip-trace-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

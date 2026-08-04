@@ -1,0 +1,306 @@
+openapi: 3.1.0
+info:
+  title: RealEstateAPI
+  description: >-
+    RealEstateAPI.com provides expressive property data APIs for prop-tech
+    applications. Endpoints include property search, property detail,
+    comparables, AVM (automated valuation), parcel boundary lookups, MLS data,
+    skip tracing, and involuntary lien data. All endpoints accept JSON and
+    require an x-api-key header.
+  version: '1.0'
+  contact:
+    name: RealEstateAPI Support
+    url: https://www.realestateapi.com/
+servers:
+  - url: https://api.realestateapi.com
+    description: RealEstateAPI production base URL
+security:
+  - apiKeyAuth: []
+tags:
+  - name: Property Search
+    description: Search and filter properties
+  - name: Property Detail
+    description: Detailed property records
+  - name: Comparables
+    description: Comparable property analytics
+  - name: AVM
+    description: Automated valuation model
+  - name: Parcel
+    description: Parcel boundary and GIS data
+  - name: MLS
+    description: MLS listing data
+  - name: Skip Trace
+    description: Owner contact tracing
+  - name: Liens
+    description: Involuntary lien records
+paths:
+  /v2/PropertySearch:
+    post:
+      tags:
+        - Property Search
+      summary: Search properties
+      description: >-
+        Searchable interface for real estate data, enabling list building,
+        search counts, and advanced filtering on properties. Supports location
+        (address, city, state, zip, county, lat/long, radius, polygon),
+        property characteristics (beds, baths, sqft, lot size, year built,
+        property type), financial filters (assessed value, equity, mortgage,
+        listing price, last sale price), and special-status searches
+        (foreclosure, REO, pre-foreclosure, auction, tax delinquent, cash
+        buyer, investor-owned).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                size:
+                  type: integer
+                  maximum: 250
+                  default: 50
+                resultIndex:
+                  type: integer
+                  default: 0
+                count:
+                  type: boolean
+                ids_only:
+                  type: boolean
+                summary:
+                  type: boolean
+                obfuscate:
+                  type: boolean
+                address:
+                  type: string
+                city:
+                  type: string
+                state:
+                  type: string
+                zip:
+                  type: string
+                county:
+                  type: string
+                latitude:
+                  type: number
+                longitude:
+                  type: number
+                radius:
+                  type: number
+                polygon:
+                  type: array
+                  items:
+                    type: array
+                    items:
+                      type: number
+                bedrooms_min:
+                  type: integer
+                bedrooms_max:
+                  type: integer
+                bathrooms_min:
+                  type: number
+                bathrooms_max:
+                  type: number
+                building_size_min:
+                  type: integer
+                building_size_max:
+                  type: integer
+                lot_size_min:
+                  type: integer
+                lot_size_max:
+                  type: integer
+                year_built_min:
+                  type: integer
+                year_built_max:
+                  type: integer
+                property_type:
+                  type: string
+                  enum: [SFR, MFR, LAND, CONDO, MOBILE, OTHER]
+                pre_foreclosure:
+                  type: boolean
+                foreclosure:
+                  type: boolean
+                reo:
+                  type: boolean
+                auction:
+                  type: boolean
+                tax_delinquent:
+                  type: boolean
+                cash_buyer:
+                  type: boolean
+                investor_owned:
+                  type: boolean
+      responses:
+        '200':
+          description: Search results
+        '401':
+          description: Unauthorized
+        '429':
+          description: Rate limit exceeded
+  /v2/PropertyDetail:
+    post:
+      tags:
+        - Property Detail
+      summary: Get a detailed property record
+      description: Retrieve a comprehensive record for a single property by ID or address.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                address:
+                  type: string
+                city:
+                  type: string
+                state:
+                  type: string
+                zip:
+                  type: string
+      responses:
+        '200':
+          description: Property detail
+  /v2/PropertyComps:
+    post:
+      tags:
+        - Comparables
+      summary: Retrieve comparable properties
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                address:
+                  type: string
+                radius:
+                  type: number
+                max_results:
+                  type: integer
+      responses:
+        '200':
+          description: Comparable properties
+  /v2/AVM:
+    post:
+      tags:
+        - AVM
+      summary: Automated valuation
+      description: Returns an estimated value (AVM) for a property.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                address:
+                  type: string
+      responses:
+        '200':
+          description: AVM result
+  /v2/PropertyBoundary:
+    post:
+      tags:
+        - Parcel
+      summary: Retrieve a property's parcel boundary (GeoJSON)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                address:
+                  type: string
+      responses:
+        '200':
+          description: Parcel boundary GeoJSON
+  /v2/MLSSearch:
+    post:
+      tags:
+        - MLS
+      summary: Search MLS active and historical listings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: MLS listings
+  /v2/MLSDetail:
+    post:
+      tags:
+        - MLS
+      summary: Retrieve MLS listing detail
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mls_id:
+                  type: string
+      responses:
+        '200':
+          description: MLS detail
+  /v2/SkipTrace:
+    post:
+      tags:
+        - Skip Trace
+      summary: Skip trace an owner
+      description: Look up phone, email, and contact data for a property owner.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                address:
+                  type: string
+                city:
+                  type: string
+                state:
+                  type: string
+                zip:
+                  type: string
+      responses:
+        '200':
+          description: Skip trace results
+  /v2/InvoluntaryLiens:
+    post:
+      tags:
+        - Liens
+      summary: Search involuntary liens
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Lien records
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+      description: RealEstateAPI account API key.
