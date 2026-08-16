@@ -5,7 +5,7 @@
       "source": "https://www.realestateapi.com/posts/rss/",
       "feed_url": "https://www.realestateapi.com/posts/rss/",
       "title": "",
-      "saved": 0,
+      "saved": 1,
       "method": "feed"
     },
     {
@@ -13,6 +13,6 @@
       "error": "URLError"
     }
   ],
-  "post_count": 23,
-  "fetched": "2026-08-06T14:08:46Z"
+  "post_count": 24,
+  "fetched": "2026-08-15T12:11:08Z"
 }
