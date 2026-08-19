@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "RealEstate AVM Parcel API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Parcel",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a property's parcel boundary (GeoJSON)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/PropertyBoundary",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve a property's parcel boundary (GeoJSON)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

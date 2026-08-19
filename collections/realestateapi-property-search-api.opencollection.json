@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "RealEstate AVM Property Search API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Property Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search properties",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/PropertySearch",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Searchable interface for real estate data, enabling list building, search counts, and advanced filtering on properties. Supports location (address, city, state, zip, county, lat/long, radius, polygon), property characteristics (beds, baths, sqft, lot size, year built, property type), financial filters (assessed value, equity, mortgage, listing price, last sale price), and special-status searches (foreclosure, REO, pre-foreclosure, auction, tax delinquent, cash buyer, investor-owned)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

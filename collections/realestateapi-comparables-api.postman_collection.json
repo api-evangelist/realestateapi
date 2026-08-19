@@ -1,0 +1,139 @@
+{
+  "item": [
+    {
+      "id": "31f83b89-8a7c-4c77-adba-f9e00f5149da",
+      "name": "Comparables",
+      "description": {
+        "content": "Comparable property analytics",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2cfd8c99-94bc-4b89-9aeb-16fe1ae6b01e",
+          "name": "Retrieve comparable properties",
+          "request": {
+            "name": "Retrieve comparable properties",
+            "description": {},
+            "url": {
+              "path": [
+                "v2",
+                "PropertyComps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\",\n  \"radius\": \"<number>\",\n  \"max_results\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4917f573-2e15-4df6-8bd0-20b2ffa36043",
+              "name": "Comparable properties",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertyComps"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"address\": \"<string>\",\n  \"radius\": \"<number>\",\n  \"max_results\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.realestateapi.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "64636cfb-3a16-4a75-9b14-e509b848ec23",
+    "name": "RealEstate AVM Comparables API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "RealEstateAPI.com provides expressive property data APIs for prop-tech applications. Endpoints include property search, property detail, comparables, AVM (automated valuation), parcel boundary lookups, MLS data, skip tracing, and involuntary lien data. All endpoints accept JSON and require an x-api-key header.\n\nContact Support:\n Name: RealEstateAPI Support",
+      "type": "text/plain"
+    }
+  }
+}

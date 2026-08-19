@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "RealEstate AVM API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "AVM",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Automated valuation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/AVM",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns an estimated value (AVM) for a property."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

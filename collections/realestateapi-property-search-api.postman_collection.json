@@ -1,0 +1,238 @@
+{
+  "item": [
+    {
+      "id": "5bcedf62-376a-4a8f-ae21-b79c149577fb",
+      "name": "Property Search",
+      "description": {
+        "content": "Search and filter properties",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d18ed87f-1a7e-4b3c-b989-920989ad8ff7",
+          "name": "Search properties",
+          "request": {
+            "name": "Search properties",
+            "description": {
+              "content": "Searchable interface for real estate data, enabling list building, search counts, and advanced filtering on properties. Supports location (address, city, state, zip, county, lat/long, radius, polygon), property characteristics (beds, baths, sqft, lot size, year built, property type), financial filters (assessed value, equity, mortgage, listing price, last sale price), and special-status searches (foreclosure, REO, pre-foreclosure, auction, tax delinquent, cash buyer, investor-owned).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "PropertySearch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"size\": 50,\n  \"resultIndex\": 0,\n  \"count\": \"<boolean>\",\n  \"ids_only\": \"<boolean>\",\n  \"summary\": \"<boolean>\",\n  \"obfuscate\": \"<boolean>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"county\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"radius\": \"<number>\",\n  \"polygon\": [\n    [\n      \"<number>\",\n      \"<number>\"\n    ],\n    [\n      \"<number>\",\n      \"<number>\"\n    ]\n  ],\n  \"bedrooms_min\": \"<integer>\",\n  \"bedrooms_max\": \"<integer>\",\n  \"bathrooms_min\": \"<number>\",\n  \"bathrooms_max\": \"<number>\",\n  \"building_size_min\": \"<integer>\",\n  \"building_size_max\": \"<integer>\",\n  \"lot_size_min\": \"<integer>\",\n  \"lot_size_max\": \"<integer>\",\n  \"year_built_min\": \"<integer>\",\n  \"year_built_max\": \"<integer>\",\n  \"property_type\": \"<string>\",\n  \"pre_foreclosure\": \"<boolean>\",\n  \"foreclosure\": \"<boolean>\",\n  \"reo\": \"<boolean>\",\n  \"auction\": \"<boolean>\",\n  \"tax_delinquent\": \"<boolean>\",\n  \"cash_buyer\": \"<boolean>\",\n  \"investor_owned\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d9b77444-ece4-4fbf-b516-a4a28b84fadb",
+              "name": "Search results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertySearch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"size\": 50,\n  \"resultIndex\": 0,\n  \"count\": \"<boolean>\",\n  \"ids_only\": \"<boolean>\",\n  \"summary\": \"<boolean>\",\n  \"obfuscate\": \"<boolean>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"county\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"radius\": \"<number>\",\n  \"polygon\": [\n    [\n      \"<number>\",\n      \"<number>\"\n    ],\n    [\n      \"<number>\",\n      \"<number>\"\n    ]\n  ],\n  \"bedrooms_min\": \"<integer>\",\n  \"bedrooms_max\": \"<integer>\",\n  \"bathrooms_min\": \"<number>\",\n  \"bathrooms_max\": \"<number>\",\n  \"building_size_min\": \"<integer>\",\n  \"building_size_max\": \"<integer>\",\n  \"lot_size_min\": \"<integer>\",\n  \"lot_size_max\": \"<integer>\",\n  \"year_built_min\": \"<integer>\",\n  \"year_built_max\": \"<integer>\",\n  \"property_type\": \"<string>\",\n  \"pre_foreclosure\": \"<boolean>\",\n  \"foreclosure\": \"<boolean>\",\n  \"reo\": \"<boolean>\",\n  \"auction\": \"<boolean>\",\n  \"tax_delinquent\": \"<boolean>\",\n  \"cash_buyer\": \"<boolean>\",\n  \"investor_owned\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "18b62bcf-faee-4549-9358-d950f713c633",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertySearch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"size\": 50,\n  \"resultIndex\": 0,\n  \"count\": \"<boolean>\",\n  \"ids_only\": \"<boolean>\",\n  \"summary\": \"<boolean>\",\n  \"obfuscate\": \"<boolean>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"county\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"radius\": \"<number>\",\n  \"polygon\": [\n    [\n      \"<number>\",\n      \"<number>\"\n    ],\n    [\n      \"<number>\",\n      \"<number>\"\n    ]\n  ],\n  \"bedrooms_min\": \"<integer>\",\n  \"bedrooms_max\": \"<integer>\",\n  \"bathrooms_min\": \"<number>\",\n  \"bathrooms_max\": \"<number>\",\n  \"building_size_min\": \"<integer>\",\n  \"building_size_max\": \"<integer>\",\n  \"lot_size_min\": \"<integer>\",\n  \"lot_size_max\": \"<integer>\",\n  \"year_built_min\": \"<integer>\",\n  \"year_built_max\": \"<integer>\",\n  \"property_type\": \"<string>\",\n  \"pre_foreclosure\": \"<boolean>\",\n  \"foreclosure\": \"<boolean>\",\n  \"reo\": \"<boolean>\",\n  \"auction\": \"<boolean>\",\n  \"tax_delinquent\": \"<boolean>\",\n  \"cash_buyer\": \"<boolean>\",\n  \"investor_owned\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "43bdb107-666c-4ad8-a5a1-0b158e396f7f",
+              "name": "Rate limit exceeded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "PropertySearch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "x-api-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"size\": 50,\n  \"resultIndex\": 0,\n  \"count\": \"<boolean>\",\n  \"ids_only\": \"<boolean>\",\n  \"summary\": \"<boolean>\",\n  \"obfuscate\": \"<boolean>\",\n  \"address\": \"<string>\",\n  \"city\": \"<string>\",\n  \"state\": \"<string>\",\n  \"zip\": \"<string>\",\n  \"county\": \"<string>\",\n  \"latitude\": \"<number>\",\n  \"longitude\": \"<number>\",\n  \"radius\": \"<number>\",\n  \"polygon\": [\n    [\n      \"<number>\",\n      \"<number>\"\n    ],\n    [\n      \"<number>\",\n      \"<number>\"\n    ]\n  ],\n  \"bedrooms_min\": \"<integer>\",\n  \"bedrooms_max\": \"<integer>\",\n  \"bathrooms_min\": \"<number>\",\n  \"bathrooms_max\": \"<number>\",\n  \"building_size_min\": \"<integer>\",\n  \"building_size_max\": \"<integer>\",\n  \"lot_size_min\": \"<integer>\",\n  \"lot_size_max\": \"<integer>\",\n  \"year_built_min\": \"<integer>\",\n  \"year_built_max\": \"<integer>\",\n  \"property_type\": \"<string>\",\n  \"pre_foreclosure\": \"<boolean>\",\n  \"foreclosure\": \"<boolean>\",\n  \"reo\": \"<boolean>\",\n  \"auction\": \"<boolean>\",\n  \"tax_delinquent\": \"<boolean>\",\n  \"cash_buyer\": \"<boolean>\",\n  \"investor_owned\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.realestateapi.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "x-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5ea2626d-d30d-4f00-8d32-95b2d4c177d1",
+    "name": "RealEstate AVM Property Search API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "RealEstateAPI.com provides expressive property data APIs for prop-tech applications. Endpoints include property search, property detail, comparables, AVM (automated valuation), parcel boundary lookups, MLS data, skip tracing, and involuntary lien data. All endpoints accept JSON and require an x-api-key header.\n\nContact Support:\n Name: RealEstateAPI Support",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "RealEstate AVM Skip Trace API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Skip Trace",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Skip trace an owner",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/SkipTrace",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Look up phone, email, and contact data for a property owner."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

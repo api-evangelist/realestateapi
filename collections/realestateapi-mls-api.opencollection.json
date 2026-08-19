@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "RealEstate AVM MLS API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "x-api-key",
+      "value": "{{x-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "MLS",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search MLS active and historical listings",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/MLSSearch",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Search MLS active and historical listings"
+        },
+        {
+          "info": {
+            "name": "Retrieve MLS listing detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.realestateapi.com/v2/MLSDetail",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Retrieve MLS listing detail"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
