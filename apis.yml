@@ -183,6 +183,9 @@ apis:
   - type: Signup
     url: https://app.realestateapi.com/signup
 common:
+  - type: CapabilityMap
+    url: capabilities/realestateapi-capability-edges.yml
+    name: RealEstateAPI Business Capability Map
   - type: AgenticAccess
     url: agentic-access/realestateapi-agentic-access.yml
   - type: DomainSecurity
