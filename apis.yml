@@ -184,6 +184,8 @@ apis:
   - type: Signup
     url: https://app.realestateapi.com/signup
 common:
+  - type: Website
+    url: https://www.realestateapi.com/
   - type: CapabilityMap
     url: capabilities/realestateapi-capability-edges.yml
     name: RealEstateAPI Business Capability Map
