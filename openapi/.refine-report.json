@@ -1,14 +1,7 @@
 {
   "provider": "realestateapi",
   "sources": [
-    "realestateapi-avm-api-openapi.yml",
-    "realestateapi-comparables-api-openapi.yml",
-    "realestateapi-liens-api-openapi.yml",
-    "realestateapi-mls-api-openapi.yml",
-    "realestateapi-parcel-api-openapi.yml",
-    "realestateapi-property-detail-api-openapi.yml",
-    "realestateapi-property-search-api-openapi.yml",
-    "realestateapi-skip-trace-api-openapi.yml"
+    "_original/realestateapi-openapi.yml"
   ],
   "outputs": [
     "realestateapi-avm-api-openapi.yml",
@@ -23,6 +16,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "realestateapi-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "realestateapi-avm-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "realestateapi-comparables-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "realestateapi-liens-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "realestateapi-mls-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "realestateapi-parcel-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "realestateapi-property-detail-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "realestateapi-property-search-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "realestateapi-skip-trace-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

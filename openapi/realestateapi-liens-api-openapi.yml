@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: RealEstate AVM Liens API
+  title: RealEstate Liens API
   description: RealEstateAPI.com provides expressive property data APIs for prop-tech applications. Endpoints include property search, property detail, comparables, AVM (automated valuation), parcel boundary lookups, MLS data, skip tracing, and involuntary lien data. All endpoints accept JSON and require an x-api-key header.
   version: '1.0'
   contact:
@@ -29,6 +29,8 @@ paths:
       responses:
         '200':
           description: Lien records
+      operationId: postV2InvoluntaryLiens
+      x-operation-id-source: derived
 components:
   securitySchemes:
     apiKeyAuth:

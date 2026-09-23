@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: RealEstate AVM Property Search API
+  title: RealEstate Property Search API
   description: RealEstateAPI.com provides expressive property data APIs for prop-tech applications. Endpoints include property search, property detail, comparables, AVM (automated valuation), parcel boundary lookups, MLS data, skip tracing, and involuntary lien data. All endpoints accept JSON and require an x-api-key header.
   version: '1.0'
   contact:
@@ -115,6 +115,8 @@ paths:
           description: Unauthorized
         '429':
           description: Rate limit exceeded
+      operationId: postV2PropertySearch
+      x-operation-id-source: derived
 components:
   securitySchemes:
     apiKeyAuth:
