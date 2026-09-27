@@ -35,7 +35,7 @@ position: Consuming
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/realestateapi.png
 tags:
-  - Real-Estate
+  - Real Estate
   - Property Data
   - MLS
   - Valuation
@@ -50,6 +50,7 @@ tags_raw:
   - Geospatial
   - Skip Tracing
   - Prop-Tech
+  - Real-Estate
 url: https://raw.githubusercontent.com/api-evangelist/realestateapi/refs/heads/main/apis.yml
 created: '2026-03-16'
 modified: '2026-05-19'
