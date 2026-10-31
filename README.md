@@ -1,4 +1,4 @@
-# RealEstateAPI (realestateapi)
+# RealEstateAPI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,69 +66,133 @@
 
 RealEstateAPI.com offers expressive property data APIs designed for building prop-tech applications. The platform exposes nationwide US property records including ownership, valuations, MLS listings, comparables, parcel boundary data, skip tracing, and involuntary liens through a unified JSON REST API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/realestateapi/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/realestateapi/refs/heads/main/apis.yml)
+**Areas:** Real Estate · Property Data · MLS · Valuation · Geospatial · Skip Tracing · PropTech
 
-## Scope
+## RealEstateAPI on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for RealEstateAPI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/realestateapi/](https://apis.io/providers/realestateapi/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Real Estate
-- Property Data
-- MLS
-- Valuation
-- Geospatial
-- Skip Tracing
-- Prop-Tech
+- [RealEstateAPI AVM API](https://apis.io/apis/realestateapi/realestateapi-avm-api/) — Automated valuation model
+- [RealEstateAPI Comparables API](https://apis.io/apis/realestateapi/realestateapi-comparables-api/) — Comparable property analytics
+- [RealEstateAPI Liens API](https://apis.io/apis/realestateapi/realestateapi-liens-api/) — Involuntary lien records
+- [RealEstateAPI MLS API](https://apis.io/apis/realestateapi/realestateapi-mls-api/) — MLS listing data
+- [RealEstateAPI Parcel API](https://apis.io/apis/realestateapi/realestateapi-parcel-api/) — Parcel boundary and GIS data
+- [RealEstateAPI Property Detail API](https://apis.io/apis/realestateapi/realestateapi-property-detail-api/) — Detailed property records
+- [RealEstateAPI Property Search API](https://apis.io/apis/realestateapi/realestateapi-property-search-api/) — Search and filter properties
+- [RealEstateAPI Skip Trace API](https://apis.io/apis/realestateapi/realestateapi-skip-trace-api/) — Owner contact tracing
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### RealEstateAPI
+Which operations an agent can call, which act, and which need a human in the loop.
 
-A unified property data API offering property search, detail records, comparables, automated valuations (AVM), parcel boundaries, MLS data, skip tracing, and involuntary lien records. Authenticates with an x-api-key header. The Property Search endpoint supports list building, counts, and rich filtering across location, property characteristics, financial criteria, and special-status flags such as pre-foreclosure, foreclosure, REO, auction, tax delinquent, cash buyer, and investor owned.
+- [Realestateapi Agentic Access](https://apis.io/agentic-access/realestateapi/realestateapi-agentic-access/)
 
-- **Human URL:** [https://www.realestateapi.com/](https://www.realestateapi.com/)
-- **Base URL:** `https://api.realestateapi.com`
+#### Collections (9)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Real Estate
-- Property Data
-- MLS
-- Valuation
+- [RealEstateAPI](https://apis.io/collections/realestateapi/open-realestateapi/)
+- [RealEstate AVM API](https://apis.io/collections/realestateapi/open-realestateapi-avm-api/)
+- [RealEstate AVM Comparables API](https://apis.io/collections/realestateapi/open-realestateapi-comparables-api/)
+- [RealEstate AVM Liens API](https://apis.io/collections/realestateapi/open-realestateapi-liens-api/)
+- [RealEstate AVM MLS API](https://apis.io/collections/realestateapi/open-realestateapi-mls-api/)
+- [RealEstate AVM Parcel API](https://apis.io/collections/realestateapi/open-realestateapi-parcel-api/)
+- [RealEstate AVM Property Detail API](https://apis.io/collections/realestateapi/open-realestateapi-property-detail-api/)
+- [RealEstate AVM Property Search API](https://apis.io/collections/realestateapi/open-realestateapi-property-search-api/)
+- [RealEstate AVM Skip Trace API](https://apis.io/collections/realestateapi/open-realestateapi-skip-trace-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://developer.realestateapi.com/reference/getting-started)
-- [Property Search](https://developer.realestateapi.com/reference/property-search-api)
-- [Sign Up](https://app.realestateapi.com/signup)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/realestateapi/refs/heads/main/openapi/realestateapi-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/realestateapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/realestateapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Realestateapi Authentication](https://apis.io/security/realestateapi/realestateapi-authentication/)
+- [Realestateapi Domain Security](https://apis.io/security/realestateapi/realestateapi-domain-security/)
 
-- [GitHub Organization](https://github.com/realestateapi)
-- [LinkedIn](https://www.linkedin.com/company/realestateapi)
-- [Portal](https://www.realestateapi.com/)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Realestateapi Plans Pricing](https://apis.io/plans/realestateapi/realestateapi-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Realestateapi Rate Limits](https://apis.io/rate-limits/realestateapi/realestateapi-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Realestateapi Finops](https://apis.io/finops/realestateapi/realestateapi-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.realestateapi.com/)
 - [Documentation](https://developer.realestateapi.com/)
 - [Pricing](https://www.realestateapi.com/pricing/)
-- [Sign Up](https://app.realestateapi.com/signup)
-- [Login](https://app.realestateapi.com/login)
 - [Blog](https://www.realestateapi.com/blog/)
-- [Contact](https://www.realestateapi.com/contact/)
-- [Terms of Service](https://www.realestateapi.com/terms-of-service/)
-- [Privacy Policy](https://www.realestateapi.com/privacy-policy/)
+- [Terms of service](https://www.realestateapi.com/terms-of-service/)
+- [Privacy policy](https://www.realestateapi.com/privacy-policy/)
+- [GitHub](https://github.com/realestateapi)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 29.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 47.4 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 25.0 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/realestateapi/](https://apis.io/providers/realestateapi/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for RealEstateAPI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/realestateapi/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
